@@ -35,12 +35,14 @@ PennController("instructions",
           +"<p>There will be many of them, so please try not to spend too much time on each sentence.</p>"
           +"<p>There is no right or wrong answers, so please simply type a continuation that first comes to mind.</p>")
     .settings.css("font-size", "20px")
+    .print()
     ,
   newCanvas("empty canvas", 1, 40) // add some space
      .print()
      ,
  newText("heading","EXAMPLE:")
    .settings.css("font-size", "40px")
+   .print()
    ,
  newCanvas("empty canvas", 1, 40) // add some space
     .print()
@@ -50,6 +52,7 @@ newText("example_items","<p>I celebrated my birthday with --- my family"
         +"Kate told me that she was on the way to the --- gym<p>"
         +"Last year, I had a chance to visit my family in --- Malaysia")
   .settings.css("font-size", "20px")
+  .print()
   ,
  newCanvas("empty canvas", 1, 40) // add some space
     .print()
