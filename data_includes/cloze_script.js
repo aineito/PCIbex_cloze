@@ -79,22 +79,26 @@ PennController("cloze_test",
         .settings.center()
         .print()
         ,
-   newCanvas("empty canvas", 1, 40) // add some space
+   newCanvas("empty canvas", 1, 50) // add some space
        .print()
        ,
    newText("sentence_fragment", variable.Fragment)
        .settings.css("font-size", "20px")
        .print()
        ,
-   newCanvas("empty canvas", 1, 50) // add some space
+   newCanvas("empty canvas", 1, 10) // add some space
       .print()
       ,
-   newTextInput("response","")
+   newTextInput("response_input","")
       .print()
       .settings.log()
       .lines(1)
       .size(200, 30)
       ,
+  newVar("response")
+       .set(getTextInput("response_input"))
+       .global()
+       ,
    newButton("Continue", "Continue")
         .settings.center()
         .print()
@@ -107,9 +111,9 @@ PennController("cloze_test",
         .remove()
       )
 
-    .log("Item", variable.Item) // variables to record
-    .log("Fragment", variable.Fragment)
-    .log("Response", getVar("response"))
+    .log("Item", variable.Item) // record item ID
+    .log("Fragment", variable.Fragment) // record sentence fragment
+    .log("Response", getVar("response")) // record participants' response
   );
 
 PennController.SendResults("send")
