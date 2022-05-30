@@ -32,7 +32,7 @@ PennController("demographics",
     );
 
 PennController("instructions",
-  newText("heading","INSTRUCTIONS")
+  newText("heading","INSTRUCTIONS:")
      .settings.css("font-size", "24px")
      .print()
      ,
@@ -45,16 +45,13 @@ PennController("instructions",
      .settings.css("font-size", "20px")
      .print()
      ,
-  newCanvas("empty canvas", 1, 40) // add some space
+  newCanvas("empty canvas", 1, 10) // add some space
      .print()
      ,
   newText("heading","EXAMPLE:")
      .settings.css("font-size", "24px")
      .print()
      ,
-  newCanvas("empty canvas", 1, 40) // add some space
-    .print()
-    ,
   newText("example_items","<p>I celebrated my birthday with --- my family</p>"
           +"<p>I completely forgot to turn in my --- assignment</p>"
           +"<p>Kate told me that she was on the way to the --- gym</p>"
@@ -62,13 +59,16 @@ PennController("instructions",
     .settings.css("font-size", "20px")
     .print()
     ,
-  newCanvas("empty canvas", 1, 40) // add some space
+  newCanvas("empty canvas", 1, 10) // add some space
     .print()
     ,
   newButton("continue", "Continue")
     .settings.center()
     .print()
     .wait()
+    ,
+    newCanvas("empty canvas", 1, 10) // add some space
+      .print()
     );
 
 PennController.Template( PennController.GetTable("cloze_stimuli.csv"), // creates a template to be used for multiple trials; will use .csv in chunk_includes
