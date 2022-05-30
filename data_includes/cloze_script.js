@@ -1,6 +1,6 @@
 
 PennController.ResetPrefix(null);
-PennController.AddHost("https://github.com/aineito/PCIbex_cloze/blob/ee4a1ca863f84155caf9685138859b2e84fa75eb/")
+PennController.AddHost("https://github.com/aineito/PCIbex_cloze/")
 PennController.DebugOff()
 PennController.Sequence("welcome","demographics","instructions","cloze_test", "send", "final")
 
