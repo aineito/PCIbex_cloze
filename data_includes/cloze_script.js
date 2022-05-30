@@ -10,7 +10,7 @@ PennController("welcome",
   newHtml("intro", "welcome_screen.html")
     .print()
     ,
-  newButton("consent", "By ticking the box, I declare I have fully read and <br>understood the Participant's Information Sheet and consent to take part in the study.")
+  newButton("consent", "Continue")
     .settings.center()
     .print()
     .wait(
