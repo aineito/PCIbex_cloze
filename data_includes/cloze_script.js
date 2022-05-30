@@ -91,10 +91,14 @@ PennController("cloze_test",
       ,
    newTextInput("response_input","")
       .print()
+      .settings.center()
       .settings.log()
       .lines(1)
       .size(200, 30)
       ,
+  newCanvas("empty canvas", 1, 10) // add some space
+     .print()
+     ,
   newVar("response")
        .set(getTextInput("response_input"))
        .global()
